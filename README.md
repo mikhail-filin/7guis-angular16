@@ -13,10 +13,16 @@ Basically everything. But here's a list:
 
 | Task                  | Completed |
 |-----------------------|-----------|
-| Counter               | ❌        |
-| Temperature Converter | ❌        |
-| Flight booker         | ❌        |
-| Timer                 | ❌        |
-| CRUD                  | ❌        |
-| Circle drawer         | ❌        |
-| Cells                 | ❌        |
+| Counter               | ❌         |
+| Temperature Converter | ❌         |
+| Flight booker         | ❌         |
+| Timer                 | ❌         |
+| CRUD                  | ❌         |
+| Circle drawer         | ❌         |
+| Cells                 | ❌         |
+
+# To run locally
+
+- Fork/clone the repo
+- Run `npm i` to install dependencies
+- Run `ng serve`
