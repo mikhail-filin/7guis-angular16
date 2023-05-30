@@ -27,4 +27,9 @@ jobs:
         npm ci
         npm i -g @angular/cli@latest
         npm run build --configuration=production
-        ng test --no-watch --no-progress --browsers=ChromeHeadless
+
+    - name: Test
+      run: ng test --no-watch --no-progress --browsers=ChromeHeadless
+
+    - name: Lint
+      run: ng lint
