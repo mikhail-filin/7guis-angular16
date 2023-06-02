@@ -1,4 +1,11 @@
-.wrapper-main {
-	width: 60%;
-	margin: 0 auto;
+@use '../styles/variables';
+
+:host {
+	display: flex;
+	flex-direction: column;
+}
+
+.description {
+	margin-bottom: variables.$gap-lg;
+	max-width: 640px;
 }
