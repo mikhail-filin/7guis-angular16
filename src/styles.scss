@@ -4,6 +4,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 html {
@@ -29,13 +30,11 @@ body {
 	font-family: monospace;
 }
 
-h1 {
+h1, h2, h3 {
 	font-weight: 700;
-	margin-bottom: variables.$gap;
 }
 
 h2 {
-	font-weight: 700;
 	margin-bottom: variables.$gap;
 }
 
@@ -44,4 +43,18 @@ ol {
 	flex-direction: column;
 	list-style-position: inside;
 	gap: variables.$gap;
+}
+
+a {
+	color: colors.$text-accent;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@media (max-width: 680px) {
+	body {
+		padding: 20px;
+	}
 }
