@@ -1,9 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { CounterComponent } from './components/counter/counter.component';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    declarations: [AppComponent]
+    declarations: [AppComponent, CounterComponent]
   }));
 
   it('should create the app', () => {
