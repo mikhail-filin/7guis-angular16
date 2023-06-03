@@ -6,17 +6,20 @@ import { CounterComponent } from './components/counter/counter.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './components/main/main.component';
+import { TemperatureConverterComponent } from './components/temperature-converter/temperature-converter.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
-  { path: 'counter', component: CounterComponent }
+  { path: 'counter', component: CounterComponent },
+  { path: 'temperature-converter', component: TemperatureConverterComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
-    MainComponent
+    MainComponent,
+    TemperatureConverterComponent
   ],
   imports: [
     BrowserModule,
