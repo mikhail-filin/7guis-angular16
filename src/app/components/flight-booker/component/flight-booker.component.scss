@@ -1,0 +1,8 @@
+@use '../../../../styles/variables';
+
+:host {
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	gap: variables.$gap;
+}
