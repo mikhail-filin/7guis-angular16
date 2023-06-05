@@ -13,13 +13,13 @@ using Angular 16 and newest additions like signals
 
 ## To do
 
-Basically everything. But here's a list:
+Here's a list. It includes only logic, not templates or unit tests
 
 | Task                  | Completed |
 |-----------------------|-----------|
-| Counter               | ❌         |
-| Temperature Converter | ❌         |
-| Flight booker         | ❌         |
+| Counter               | ✅         |
+| Temperature Converter | ✅         |
+| Flight booker         | ✅         |
 | Timer                 | ❌         |
 | CRUD                  | ❌         |
 | Circle drawer         | ❌         |
