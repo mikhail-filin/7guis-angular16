@@ -1,0 +1,20 @@
+[
+  {
+    "id": "counter",
+    "title": "Counter",
+    "challenge": "Understanding the basic ideas of a language/toolkit.",
+    "description": ""
+  },
+  {
+    "id": "temperature-converter",
+    "title": "Temperature Converter",
+    "challenge": "Bidirectional data flow, user-provided text input.",
+    "description": ""
+  },
+  {
+    "id": "flight-booker",
+    "title": "Flight Booker",
+    "challenge": "Constraints.",
+    "description": ""
+  }
+]

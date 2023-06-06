@@ -1,6 +1,6 @@
 import { Component, computed, signal, WritableSignal } from '@angular/core';
 import { SelectOption } from '../../../models/select-option.model';
-import { ONE_WAY_FLIGHT, RETURN_FLIGHT } from '../flight-types.const';
+import { ONE_WAY_FLIGHT, RETURN_FLIGHT } from './flight-types.const';
 
 @Component({
   selector: 'guis-flight-booker',
