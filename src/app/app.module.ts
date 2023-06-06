@@ -2,19 +2,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { CounterComponent } from './components/counter/counter.component';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './components/main/main.component';
-import { TemperatureConverterComponent } from './components/temperature-converter/temperature-converter.component';
-import { FlightBookerComponent } from './components/flight-booker/component/flight-booker.component';
-
-const routes: Routes = [
-  { path: '', component: MainComponent },
-  { path: 'counter', component: CounterComponent },
-  { path: 'temperature-converter', component: TemperatureConverterComponent },
-  { path: 'flight-booker', component: FlightBookerComponent }
-];
+import { MainComponent } from './components/pages/main/main.component';
+import { TemperatureConverterComponent } from './components/features/temperature-converter/temperature-converter.component';
+import { FlightBookerComponent } from './components/features/flight-booker/flight-booker.component';
+import { FeatureWrapperComponent } from './components/feature-wrapper/feature-wrapper.component';
+import { CounterComponent } from './components/features/counter/counter.component';
+import { PageCounterComponent } from './components/pages/page-counter/page-counter.component';
+import { PageTemperatureComponent } from './components/pages/page-temperature/page-temperature.component';
+import { PageFlightBookerComponent } from './components/pages/page-flight-booker/page-flight-booker.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,14 +19,17 @@ const routes: Routes = [
     CounterComponent,
     MainComponent,
     TemperatureConverterComponent,
-    FlightBookerComponent
+    FlightBookerComponent,
+    FeatureWrapperComponent,
+    PageCounterComponent,
+    PageTemperatureComponent,
+    PageFlightBookerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
   ],
-  exports: [RouterModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

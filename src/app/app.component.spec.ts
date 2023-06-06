@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { CounterComponent } from './components/counter/counter.component';
 import { RouterModule } from '@angular/router';
+import { CounterComponent } from './components/features/counter/counter.component';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
