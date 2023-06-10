@@ -1,8 +1,8 @@
-$gap-sm: $gap / 1.5;
 $gap: 12px;
-$gap-md: $gap * 1.5;
-$gap-lg: $gap * 2;
-$gap-xl: $gap * 3;
-$gap-xxl: $gap * 4;
+$gap-sm: calc(#{$gap} / 1.5);
+$gap-md: calc(#{$gap} * 1.5);
+$gap-lg: calc(#{$gap} * 2);
+$gap-xl: calc(#{$gap} * 3);
+$gap-xxl: calc(#{$gap} * 4);
 
 $breakpoint-sm: 900px;
