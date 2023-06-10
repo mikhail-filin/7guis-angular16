@@ -3,18 +3,47 @@
     "id": "counter",
     "title": "Counter",
     "challenge": "Understanding the basic ideas of a language/toolkit.",
-    "description": ""
+    "tasks": [
+      "Build a frame containing a label or read-only textfield and a button.",
+      "Initially, the value in the textfield is 0.",
+      "Each click of the button increases the value in the textfield by 1."
+    ],
+    "description": [
+      "Counter serves as a gentle introduction to the basics of the language, paradigm and toolkit for one of the simplest GUI applications imaginable. Thus, Counter reveals the required scaffolding and how the very basic features work together to build a GUI application. A good solution will have almost no scaffolding."
+    ]
   },
   {
     "id": "temperature-converter",
     "title": "Temperature Converter",
     "challenge": "Bidirectional data flow, user-provided text input.",
-    "description": ""
+    "tasks": [
+      "Build a frame containing two textfields representing the temperature in Celsius and Fahrenheit.",
+      "Initially, both textfields are empty",
+      "When the user enters a numerical value into any textfield, the corresponding value in the other one is automatically updated.",
+      "When the user enters a non-numerical string into a textfield, the value in the other one is not updated.",
+      "The formula for converting a temperature in Celsius into a temperature in Fahrenheit: C = (F - 32) * (5/9).",
+      "The formula for converting a temperature in Fahrenheit into a temperature in Celsius: F = C * (9/5) + 32."
+    ],
+    "description": [
+      "Temperature Converter increases the complexity of Counter by having bidirectional data flow between the Celsius and Fahrenheit inputs and the need to check the user input for validity. A good solution will make the bidirectional dependency very clear with minimal boilerplate code.",
+      "Temperature Converter is inspired by the <a href='https://www.artima.com/pins1ed/gui-programming.html#32.4' target='blank'>Celsius/Fahrenheit converter</a> from the book Programming in Scala. It is such a widespread example—sometimes also in the form of a currency converter—that one could give a thousand references. The same is true for the Counter task"
+    ]
   },
   {
     "id": "flight-booker",
     "title": "Flight Booker",
     "challenge": "Constraints.",
-    "description": ""
+    "tasks": [
+      "Build a frame containing a combobox with the two options “one-way flight” and “return flight”, two textfields representing the start and return date, and a button for submitting the selected flight.",
+      "The return field is enabled if the combobox’s value is “return flight”.",
+      "When the combobox has the value “return flight” and return field's date is strictly before departure field's then button is disabled.",
+      "When a non-disabled textfield has an ill-formatted date then textfield is colored red and the button is disabled.",
+      "When clicking the button a message is displayed informing the user of his selection.",
+      "Initially, the combobox has the value “one-way flight” and both textfields have the same (arbitrary) date."
+    ],
+    "description": [
+      "The focus of Flight Booker lies on modelling constraints between widgets on the one hand and modelling constraints within a widget on the other hand. Such constraints are very common in everyday interactions with GUI applications. A good solution for Flight Booker will make the constraints clear, succinct and explicit in the source code and not hidden behind a lot of scaffolding.",
+      "Flight Booker is directly inspired by the <a href='http://blog.reactiveprogramming.org/?p=21' target='blank'>Flight Booking Java example in Sodium</a> with the simplification of using textfields for date input instead of specialized date picking widgets as the focus of Flight Booker is not on specialized/custom widgets."
+    ]
   }
 ]

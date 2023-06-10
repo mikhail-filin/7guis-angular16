@@ -27,7 +27,7 @@ Here's a list. It includes only logic, not templates or unit tests
 
 ## Installation steps
 
-- Fork/clone the repo
+- Clone the repo
 - Run `npm i` to install dependencies
 - Run `ng serve`
 
