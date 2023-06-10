@@ -1,5 +1,29 @@
-<h1>{{ featureData?.title }}</h1>
-<p>{{ featureData?.challenge }}</p>
-<p>{{ featureData?.description }}</p>
-<hr>
-<ng-content></ng-content>
+<header class="feature-wrapper__header">
+    <h1>{{ featureData?.title }}</h1>
+</header>
+
+<section class="feature-wrapper__description">
+    <div *ngIf="featureData?.challenge" class="feature-wrapper__inner-wrapper">
+        <h2 class="feature-wrapper__title">Challenge:</h2>
+        <p class="feature-wrapper__text">{{ featureData?.challenge }}</p>
+    </div>
+
+    <div *ngIf="featureData?.tasks?.length" class="feature-wrapper__inner-wrapper">
+        <h2 class="feature-wrapper__title">Tasks:</h2>
+        <ul class="feature-wrapper__list">
+            <li *ngFor="let task of featureData?.tasks">{{ task }}</li>
+        </ul>
+    </div>
+
+    <div *ngIf="featureData?.description?.length" class="feature-wrapper__inner-wrapper">
+        <h2 class="feature-wrapper__title">Description:</h2>
+        <p *ngFor="let paragraph of featureData?.description"
+           class="feature-wrapper__text"
+           [innerHTML]="paragraph">
+        </p>
+    </div>
+</section>
+
+<section class="feature-wrapper__implementation">
+    <ng-content></ng-content>
+</section>

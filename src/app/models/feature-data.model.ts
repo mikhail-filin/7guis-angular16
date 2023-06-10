@@ -2,5 +2,6 @@ export interface FeatureData {
   id: string;
   title: string;
   challenge: string;
-  description: string;
+  tasks: string[];
+  description: string[];
 }

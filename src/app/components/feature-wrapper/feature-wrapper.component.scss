@@ -1,0 +1,52 @@
+@use "src/styles/variables";
+
+:host {
+	display: grid;
+	grid-gap: variables.$gap-xl variables.$gap-xxl;
+	grid:
+		"header header" auto
+		"description implementation" auto / 1fr 1fr;
+}
+
+@media (max-width: variables.$breakpoint-sm) {
+	:host {
+		grid-template-areas:
+			"header"
+			"description"
+			"implementation";
+		grid-template-columns: auto;
+	}
+}
+
+.feature-wrapper {
+	&__header {
+		grid-area: header;
+	}
+
+	&__description {
+		grid-area: description;
+		display: flex;
+		flex-direction: column;
+		gap: variables.$gap-md;
+	}
+
+	&__implementation {
+		grid-area: implementation;
+	}
+
+	&__title {
+		font-size: 14px;
+		font-weight: 700;
+		margin-bottom: variables.$gap-sm;
+	}
+
+	&__text {
+		& + & {
+			margin-top: variables.$gap-md;
+		}
+	}
+
+	&__list {
+		list-style-position: inside;
+	}
+}
