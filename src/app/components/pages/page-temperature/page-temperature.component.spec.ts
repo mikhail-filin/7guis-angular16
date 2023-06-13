@@ -4,6 +4,7 @@ import { PageTemperatureComponent } from './page-temperature.component';
 import { FeatureWrapperComponent } from '../../feature-wrapper/feature-wrapper.component';
 import { TemperatureConverterComponent } from '../../features/temperature-converter/temperature-converter.component';
 import { FormsModule } from '@angular/forms';
+import { SolutionWrapperComponent } from '../../solution-wrapper/solution-wrapper.component';
 
 describe('PageTemperatureComponent', () => {
   let component: PageTemperatureComponent;
@@ -15,7 +16,8 @@ describe('PageTemperatureComponent', () => {
       declarations: [
         PageTemperatureComponent,
         FeatureWrapperComponent,
-        TemperatureConverterComponent
+        TemperatureConverterComponent,
+        SolutionWrapperComponent
       ]
     });
     fixture = TestBed.createComponent(PageTemperatureComponent);
