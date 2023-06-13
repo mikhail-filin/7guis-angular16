@@ -4,6 +4,7 @@ import { PageFlightBookerComponent } from './page-flight-booker.component';
 import { FeatureWrapperComponent } from '../../feature-wrapper/feature-wrapper.component';
 import { FlightBookerComponent } from '../../features/flight-booker/flight-booker.component';
 import { FormsModule } from '@angular/forms';
+import { SolutionWrapperComponent } from '../../solution-wrapper/solution-wrapper.component';
 
 describe('PageFlightBookerComponent', () => {
   let component: PageFlightBookerComponent;
@@ -12,7 +13,12 @@ describe('PageFlightBookerComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [FormsModule],
-      declarations: [PageFlightBookerComponent, FeatureWrapperComponent, FlightBookerComponent]
+      declarations: [
+        PageFlightBookerComponent,
+        FeatureWrapperComponent,
+        FlightBookerComponent,
+        SolutionWrapperComponent
+      ]
     });
     fixture = TestBed.createComponent(PageFlightBookerComponent);
     component = fixture.componentInstance;

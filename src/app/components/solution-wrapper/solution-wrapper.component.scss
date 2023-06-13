@@ -1,0 +1,31 @@
+@use 'src/styles/colors';
+@use 'src/styles/variables';
+
+:host {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.solution-wrapper {
+	&-header {
+		display: flex;
+
+		&__title {
+			border-top-left-radius: variables.$gap-sm;
+			border-top-right-radius: variables.$gap-sm;
+			background: colors.$dark-bg;
+			color: colors.$text-primary;
+
+			font-size: 14px;
+			font-weight: 700;
+			padding: 2px variables.$gap-sm;
+		}
+	}
+
+	&-main {
+		border: 1px solid colors.$dark-bg;
+		border-radius: 0 variables.$gap-sm variables.$gap-sm variables.$gap-sm;
+		padding: variables.$gap;
+	}
+}

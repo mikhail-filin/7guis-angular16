@@ -12,7 +12,11 @@ describe('PageTemperatureComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [FormsModule],
-      declarations: [PageTemperatureComponent, FeatureWrapperComponent, TemperatureConverterComponent]
+      declarations: [
+        PageTemperatureComponent,
+        FeatureWrapperComponent,
+        TemperatureConverterComponent
+      ]
     });
     fixture = TestBed.createComponent(PageTemperatureComponent);
     component = fixture.componentInstance;

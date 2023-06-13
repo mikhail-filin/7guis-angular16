@@ -12,6 +12,7 @@ import { PageCounterComponent } from './components/pages/page-counter/page-count
 import { PageTemperatureComponent } from './components/pages/page-temperature/page-temperature.component';
 import { PageFlightBookerComponent } from './components/pages/page-flight-booker/page-flight-booker.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SolutionWrapperComponent } from './components/solution-wrapper/solution-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     FeatureWrapperComponent,
     PageCounterComponent,
     PageTemperatureComponent,
-    PageFlightBookerComponent
+    PageFlightBookerComponent,
+    SolutionWrapperComponent
   ],
   imports: [
     BrowserModule,
