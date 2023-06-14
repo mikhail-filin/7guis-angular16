@@ -6,9 +6,9 @@ import { Component, signal } from '@angular/core';
   styleUrls: ['./counter.component.scss']
 })
 export class CounterComponent {
-  protected counter = signal(0);
+  public counter = signal(0);
 
-  protected incrementValue() {
+  public incrementValue() {
     this.counter.update((val) => ++val);
   }
 }
