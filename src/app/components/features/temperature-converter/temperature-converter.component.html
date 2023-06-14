@@ -1,11 +1,11 @@
 <input type="number"
        id="celsius"
-       [ngModel]="celsiusComp() | number: '0.0-2'"
-       (ngModelChange)="celsius.set($event)">
+       [ngModel]="celsius() | number: '0.0-2'"
+       (ngModelChange)="celsiusChange($event)">
 <label for="celsius">Celsius</label>
 
 <input type="number"
        id="fahrenheit"
-       [ngModel]="fahrenheitComp()  | number: '0.0-2'"
-       (ngModelChange)="fahrenheit.set($event)">
+       [ngModel]="fahrenheit()  | number: '0.0-2'"
+       (ngModelChange)="fahrenheitChange($event)">
 <label for="fahrenheit">Fahrenheit</label>
