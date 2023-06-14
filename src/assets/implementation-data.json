@@ -11,6 +11,10 @@
   {
     "id": "temperature-converter",
     "title": "Temperature converter",
+    "notes": [
+      "Initially I wanted to do it using <code>computed()</code> signals. That was a bad idea: while technically working, it changed only values in the template. Actual component values was untouched and it caused a lot of confusion.",
+      "After that I moved to basic solution with regular writable signals and separate methods to update Celsius and Fahrenheit values."
+    ],
     "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/components/features/temperature-converter/temperature-converter.component.ts"
   },
   {

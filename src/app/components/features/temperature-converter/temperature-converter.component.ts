@@ -1,4 +1,4 @@
-import { Component, computed, signal, WritableSignal } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'guis-temperature-converter',
@@ -6,19 +6,16 @@ import { Component, computed, signal, WritableSignal } from '@angular/core';
   styleUrls: ['./temperature-converter.component.scss']
 })
 export class TemperatureConverterComponent {
-  protected celsius: WritableSignal<number | null> = signal(null);
-  protected fahrenheit: WritableSignal<number | null> = signal(null);
+  public celsius: WritableSignal<number | null> = signal(null);
+  public fahrenheit: WritableSignal<number | null> = signal(null);
 
-  protected celsiusComp = computed(() => {
-    const fahrenheitVal = this.fahrenheit();
-    return fahrenheitVal != null ?
-      (fahrenheitVal - 32) * 5 / 9 :
-      null;
-  });
-  protected fahrenheitComp = computed(() => {
-    const celsiusVal = this.celsius();
-    return celsiusVal != null ?
-      celsiusVal * 9 / 5 + 32 :
-      null;
-  })
+  public celsiusChange(updatedValue: number) {
+    this.celsius.set(updatedValue);
+    this.fahrenheit.set(updatedValue * 9 / 5 + 32)
+  }
+
+  public fahrenheitChange(updatedValue: number) {
+    this.fahrenheit.set(updatedValue);
+    this.celsius.set((updatedValue  - 32) * 5 / 9);
+  }
 }
