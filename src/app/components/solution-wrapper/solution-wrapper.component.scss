@@ -27,5 +27,21 @@
 		border: 1px solid colors.$dark-bg;
 		border-radius: 0 variables.$gap-sm variables.$gap-sm variables.$gap-sm;
 		padding: variables.$gap;
+
+		display: flex;
+		flex-direction: column;
+		gap: variables.$gap-md;
+
+		&__title {
+			font-size: 14px;
+			font-weight: 700;
+			margin-bottom: variables.$gap-sm;
+		}
+
+		&__note {
+			& + & {
+				margin-top: variables.$gap-sm;
+			}
+		}
 	}
 }

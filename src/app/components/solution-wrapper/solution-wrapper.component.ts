@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ImplementationData } from '../../models/implementation-data.model';
 
 @Component({
   selector: 'guis-solution-wrapper',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./solution-wrapper.component.scss']
 })
 export class SolutionWrapperComponent {
-  @Input({ required: true }) title: string | undefined;
+  @Input({ required: true }) implementationData: ImplementationData | undefined;
 }

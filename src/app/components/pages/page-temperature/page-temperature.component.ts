@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FeatureData } from '../../../models/feature-data.model';
+import { ImplementationData } from '../../../models/implementation-data.model';
 
 @Component({
   selector: 'guis-page-temperature',
@@ -8,4 +9,5 @@ import { FeatureData } from '../../../models/feature-data.model';
 })
 export class PageTemperatureComponent {
   @Input() public featureData: FeatureData | undefined;
+  @Input() public implementationData: ImplementationData | undefined;
 }

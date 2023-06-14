@@ -1,6 +1,24 @@
 <header class="solution-wrapper-header">
-    <h1 class="solution-wrapper-header__title">{{ title }}</h1>
+    <h1 class="solution-wrapper-header__title">{{ implementationData?.title }}</h1>
 </header>
+
 <section class="solution-wrapper-main">
-    <ng-content></ng-content>
+    <div class="solution-wrapper-main__inner-wrapper">
+        <ng-content></ng-content>
+    </div>
+
+    <div *ngIf="implementationData?.notes"
+         class="solution-wrapper-main__inner-wrapper">
+        <h2 class="solution-wrapper-main__title">Notes:</h2>
+        <p *ngFor="let note of implementationData?.notes"
+           class="solution-wrapper-main__note"
+           [innerHTML]="note">
+        </p>
+    </div>
+
+    <div class="solution-wrapper-main__inner-wrapper">
+        <h2 class="solution-wrapper-main__title">Code:</h2>
+        <p>Code of this component can be found here:&nbsp;<a [href]="implementationData?.codeURL" target="_blank">Github</a></p>
+        <p>Feel free to open issues if you find any.</p>
+    </div>
 </section>
