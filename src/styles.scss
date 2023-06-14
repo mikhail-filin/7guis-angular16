@@ -53,6 +53,12 @@ a {
 	}
 }
 
+code {
+	background: colors.$light-bg;
+	padding: 2px 4px;
+	border-radius: 4px;
+}
+
 @media (max-width: variables.$breakpoint-sm) {
 	body {
 		padding: 20px;

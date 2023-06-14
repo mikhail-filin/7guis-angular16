@@ -1,0 +1,21 @@
+[
+  {
+    "id": "counter",
+    "title": "Counter",
+    "notes": [
+      "Simple solution for simple task. Just used <code>signal</code> to store counter value and <code>signal.update()</code> to update it.",
+      "Signals do not change much in this case."
+    ],
+    "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/components/features/counter/counter.component.ts"
+  },
+  {
+    "id": "temperature-converter",
+    "title": "Temperature converter",
+    "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/components/features/temperature-converter/temperature-converter.component.ts"
+  },
+  {
+    "id": "flight-booker",
+    "title": "Flight booker",
+    "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/components/features/flight-booker/flight-booker.component.ts"
+  }
+]
