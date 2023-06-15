@@ -1,12 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import { CounterComponent } from './page-features/components/guis/counter/counter.component';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [RouterModule],
-    declarations: [AppComponent, CounterComponent]
+    declarations: [AppComponent]
   }));
 
   it('should create the app', () => {
