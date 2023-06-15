@@ -6,7 +6,7 @@
       "Simple solution for simple task. Just used <code>signal</code> to store counter value and <code>signal.update()</code> to update it.",
       "Signals do not change much in this case."
     ],
-    "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/components/features/counter/counter.component.ts"
+    "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/page-features/components/guis/counter/counter.component.ts"
   },
   {
     "id": "temperature-converter",
@@ -15,11 +15,11 @@
       "Initially I wanted to do it using <code>computed()</code> signals. That was a bad idea: while technically working, it changed only values in the template. Actual component values was untouched and it caused a lot of confusion.",
       "After that I moved to basic solution with regular writable signals and separate methods to update Celsius and Fahrenheit values."
     ],
-    "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/components/features/temperature-converter/temperature-converter.component.ts"
+    "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/page-features/components/guis/temperature-converter/temperature-converter.component.ts"
   },
   {
     "id": "flight-booker",
     "title": "Flight booker",
-    "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/components/features/flight-booker/flight-booker.component.ts"
+    "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/page-features/components/guis/flight-booker/flight-booker.component.ts"
   }
 ]
