@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { ActivatedRouteSnapshot, ResolveFn, RouterModule, Routes } from '@angular/router';
-import { PageFeatureComponent } from './pages/page-feature/page-feature.component';
-import { CounterComponent } from './features/counter/counter.component';
-import { TemperatureConverterComponent } from './features/temperature-converter/temperature-converter.component';
-import { FlightBookerComponent } from './features/flight-booker/flight-booker.component';
-import { FeatureData } from '../models/feature-data.model';
+import { PageFeaturesComponent } from './page-features.component';
+import { CounterComponent } from './components/guis/counter/counter.component';
+import { TemperatureConverterComponent } from './components/guis/temperature-converter/temperature-converter.component';
+import { FlightBookerComponent } from './components/guis/flight-booker/flight-booker.component';
+import { FeatureData } from './models/feature-data.model';
 import featureData from '../../assets/feature-data.json';
 import implementationData from '../../assets/implementation-data.json';
 import { of } from 'rxjs';
-import { ImplementationData } from '../models/implementation-data.model';
+import { ImplementationData } from './models/implementation-data.model';
 
 export const featureResolver: ResolveFn<FeatureData | undefined> = (route: ActivatedRouteSnapshot) => {
   const dataArr = featureData as FeatureData[];
@@ -22,7 +22,7 @@ export const implementationResolver: ResolveFn<ImplementationData | undefined> =
 const routes: Routes = [
   {
     path: '',
-    component: PageFeatureComponent,
+    component: PageFeaturesComponent,
     children: [
       {
         path: 'counter',
@@ -61,5 +61,5 @@ const routes: Routes = [
   ],
   exports: [ RouterModule ]
 })
-export class FeaturesRoutingModule {
+export class PageFeaturesRoutingModule {
 }

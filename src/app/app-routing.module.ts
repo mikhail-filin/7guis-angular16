@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PageMainComponent } from './components/pages/page-main/page-main.component';
+import { PageMainComponent } from './page-main/page-main.component';
 
 const routes: Routes = [
   {
@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'features',
-    loadChildren: () => import('./components/features.module').then(m => m.FeaturesModule)
+    loadChildren: () => import('./page-features/page-features.module').then(m => m.PageFeaturesModule)
   }
 ];
 
