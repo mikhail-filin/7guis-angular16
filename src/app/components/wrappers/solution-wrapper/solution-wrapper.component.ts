@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ImplementationData } from '../../models/implementation-data.model';
+import { ImplementationData } from '../../../models/implementation-data.model';
 
 @Component({
   selector: 'guis-solution-wrapper',

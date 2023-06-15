@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FeatureData } from '../../models/feature-data.model';
+import { FeatureData } from '../../../models/feature-data.model';
 
 @Component({
   selector: 'guis-feature-wrapper',
