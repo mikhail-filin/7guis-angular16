@@ -8,9 +8,9 @@ import { ONE_WAY_FLIGHT, RETURN_FLIGHT } from './flight-types.const';
   styleUrls: ['./flight-booker.component.scss']
 })
 export class FlightBookerComponent {
-  protected selectedFlightType = signal(ONE_WAY_FLIGHT);
-  protected startDate = signal(new Date());
-  protected endDate = signal(new Date());
+  public selectedFlightType = signal(ONE_WAY_FLIGHT);
+  public startDate = signal(new Date());
+  public endDate = signal(new Date());
 
   protected isOneWay = computed(() => {
     return this.selectedFlightType() === ONE_WAY_FLIGHT;
@@ -30,7 +30,7 @@ export class FlightBookerComponent {
     }
   ];
 
-  setNewDate(signal: WritableSignal<Date>, event: Event) {
+  public setNewDate(signal: WritableSignal<Date>, event: Event) {
     const targetEl = event.target as HTMLInputElement;
     if (!targetEl.valueAsDate) {
       return;
@@ -39,7 +39,7 @@ export class FlightBookerComponent {
     signal.set(targetEl.valueAsDate);
   }
 
-  bookFlight() {
+  public bookFlight() {
     const messageBase = 'You have booked a';
     const departureDateString = this.startDate().toLocaleDateString('en-gb');
 
