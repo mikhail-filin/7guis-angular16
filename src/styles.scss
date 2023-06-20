@@ -59,6 +59,34 @@ code {
 	border-radius: 4px;
 }
 
+label {
+	cursor: pointer;
+}
+
+.button-base {
+	border: 1px solid colors.$dark-bg;
+	padding: variables.$gap-sm variables.$gap;
+	background: colors.$dark-bg;
+	border-radius: 4px;
+	color: colors.$text-primary;
+	cursor: pointer;
+
+	&:hover {
+		background: lighten(colors.$light-bg, 5%);
+	}
+}
+
+.input-base {
+	border: 1px solid colors.$dark-bg;
+	padding: variables.$gap-sm variables.$gap;
+	border-radius: 4px;
+	color: colors.$text-primary;
+
+	&[disabled] {
+		cursor: not-allowed;
+	}
+}
+
 @media (max-width: variables.$breakpoint-sm) {
 	body {
 		padding: 20px;

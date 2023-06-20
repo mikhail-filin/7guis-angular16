@@ -1,11 +1,15 @@
 <input type="number"
        id="celsius"
+       class="input-base temperature-converter-input"
        [ngModel]="celsius() | number: '0.0-2'"
        (ngModelChange)="celsiusChange($event)">
 <label for="celsius">Celsius</label>
 
+<span><=></span>
+
 <input type="number"
        id="fahrenheit"
+       class="input-base temperature-converter-input"
        [ngModel]="fahrenheit()  | number: '0.0-2'"
        (ngModelChange)="fahrenheitChange($event)">
 <label for="fahrenheit">Fahrenheit</label>
