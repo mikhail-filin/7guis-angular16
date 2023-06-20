@@ -1,5 +1,6 @@
 <select [ngModel]="selectedFlightType()"
         id="selectedFlightTypeSelect"
+        class="input-base"
         (ngModelChange)="selectedFlightType.set($event)">
     <option *ngFor="let flightType of flightTypes"
             [value]="flightType.value">
@@ -9,16 +10,19 @@
 
 <input type="date"
        id="startDateInput"
+       class="input-base"
        [valueAsDate]="startDate()"
        (change)="setNewDate(startDate, $event)"/>
 
 <input type="date"
        id="endDateInput"
+       class="input-base"
        [valueAsDate]="endDate()"
        [disabled]="isOneWay()"
        (change)="setNewDate(endDate, $event)"/>
 
 <button id="bookFlightButton"
+        class="button-base"
         [disabled]="!isStartDateValid()"
         (click)="bookFlight()">
     Book
