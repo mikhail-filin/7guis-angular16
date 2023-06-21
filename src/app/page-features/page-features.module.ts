@@ -8,6 +8,10 @@ import { SolutionWrapperComponent } from './components/wrappers/solution-wrapper
 import { TemperatureConverterComponent } from './components/guis/temperature-converter/temperature-converter.component';
 import { FlightBookerComponent } from './components/guis/flight-booker/flight-booker.component';
 import { FormsModule } from '@angular/forms';
+import { TimerComponent } from './components/guis/timer/timer.component';
+import { CrudComponent } from './components/guis/crud/crud.component';
+import { CircleDrawerComponent } from './components/guis/circle-drawer/circle-drawer.component';
+import { CellsComponent } from './components/guis/cells/cells.component';
 
 @NgModule({
   imports: [
@@ -21,7 +25,11 @@ import { FormsModule } from '@angular/forms';
     SolutionWrapperComponent,
     CounterComponent,
     TemperatureConverterComponent,
-    FlightBookerComponent
+    FlightBookerComponent,
+    TimerComponent,
+    CrudComponent,
+    CircleDrawerComponent,
+    CellsComponent
   ]
 })
 export class PageFeaturesModule {

@@ -21,5 +21,25 @@
     "id": "flight-booker",
     "title": "Flight booker",
     "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/page-features/components/guis/flight-booker/flight-booker.component.ts"
+  },
+  {
+    "id": "timer",
+    "title": "Timer",
+    "codeURL": ""
+  },
+  {
+    "id": "crud",
+    "title": "CRUD",
+    "codeURL": ""
+  },
+  {
+    "id": "circle-drawer",
+    "title": "Circle Drawer",
+    "codeURL": ""
+  },
+  {
+    "id": "cells",
+    "title": "Cells",
+    "codeURL": ""
   }
 ]
