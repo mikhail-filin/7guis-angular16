@@ -16,8 +16,8 @@ using Angular 16 and newest additions like signals
 | Task                  | Completed |
 |-----------------------|-----------|
 | Counter               | ✅         |
-| Temperature Converter | ❓         |
-| Flight booker         | ❓         |
+| Temperature Converter | ✅         |
+| Flight booker         | ✅         |
 | Timer                 | ❌         |
 | CRUD                  | ❌         |
 | Circle drawer         | ❌         |

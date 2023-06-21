@@ -25,21 +25,21 @@
   {
     "id": "timer",
     "title": "Timer",
-    "codeURL": ""
+    "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/page-features/components/guis/timer/timer.component.ts"
   },
   {
     "id": "crud",
     "title": "CRUD",
-    "codeURL": ""
+    "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/page-features/components/guis/crud/crud.component.ts"
   },
   {
     "id": "circle-drawer",
     "title": "Circle Drawer",
-    "codeURL": ""
+    "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/page-features/components/guis/circle-drawer/circle-drawer.component.ts"
   },
   {
     "id": "cells",
     "title": "Cells",
-    "codeURL": ""
+    "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/page-features/components/guis/cells/cells.component.ts"
   }
 ]
