@@ -43,7 +43,47 @@
     ],
     "description": [
       "The focus of Flight Booker lies on modelling constraints between widgets on the one hand and modelling constraints within a widget on the other hand. Such constraints are very common in everyday interactions with GUI applications. A good solution for Flight Booker will make the constraints clear, succinct and explicit in the source code and not hidden behind a lot of scaffolding.",
-      "Flight Booker is directly inspired by the <a href='http://blog.reactiveprogramming.org/?p=21' target='blank'>Flight Booking Java example in Sodium</a> with the simplification of using textfields for date input instead of specialized date picking widgets as the focus of Flight Booker is not on specialized/custom widgets."
+      "Flight Booker is directly inspired by the <a href='https://blog.reactiveprogramming.org/?p=21' target='blank'>Flight Booking Java example in Sodium</a> with the simplification of using textfields for date input instead of specialized date picking widgets as the focus of Flight Booker is not on specialized/custom widgets."
+    ]
+  },
+  {
+    "id": "timer",
+    "title": "Timer",
+    "challenge": "Concurrency, competing user/signal interactions, responsiveness.",
+    "tasks": [],
+    "description": [
+      "Timer deals with concurrency in the sense that a timer process that updates the elapsed time runs concurrently to the user’s interactions with the GUI application. This also means that the solution to competing user and signal interactions is tested. The fact that slider adjustments must be reflected immediately moreover tests the responsiveness of the solution. A good solution will make it clear that the signal is a timer tick and, as always, has not much scaffolding.",
+      "Timer is directly inspired by the timer example in the paper <a href='https://cs.brown.edu/~sk/Publications/Papers/Published/ick-adapt-oo-fwk-frp/paper.pdf' target='_blank'>Crossing State Lines: Adapting Object-Oriented Frameworks to Functional Reactive Languages</a>."
+    ]
+  },
+  {
+    "id": "crud",
+    "title": "CRUD",
+    "challenge": "Separating the domain and presentation logic, managing mutation, building a non-trivial layout.",
+    "tasks": [],
+    "description": [
+      "CRUD (Create, Read, Update and Delete) represents a typical graphical business application. The primary challenge is the separation of domain and presentation logic in the source code that is more or less forced on the implementer due to the ability to filter the view by a prefix. Traditionally, some form of MVC pattern is used to achieve the separation of domain and presentation logic. Also, the approach to managing the mutation of the list of names is tested. A good solution will have a good separation between the domain and presentation logic without much overhead (e.g. in the form of toolkit specific concepts or language/paradigm concepts), a mutation management that is fast but not error-prone and a natural representation of the layout (layout builders are allowed, of course, but would increase the overhead).",
+      "CRUD is directly inspired by the crud example in the blog post <a href='https://apfelmus.nfshost.com/blog/2012/03/29-frp-three-principles-bidirectional-gui.html' target='_blank'>FRP - Three principles for GUI elements with bidirectional data flow.</a>"
+    ]
+  },
+  {
+    "id": "circle-drawer",
+    "title": "Circle drawer",
+    "challenge": "Undo/redo, custom drawing, dialog control.",
+    "tasks": [],
+    "description": [
+      "Circle Drawer’s goal is, among other things, to test how good the common challenge of implementing an undo/redo functionality for a GUI application can be solved. In an ideal solution the undo/redo functionality comes for free resp. just comes out as a natural consequence of the language / toolkit / paradigm. Moreover, Circle Drawer tests how dialog control*, i.e. keeping the relevant context between several successive GUI interaction steps, is achieved in the source code. Last but not least, the ease of custom drawing is tested.",
+      "Dialog control is explained in more detail in the paper <a href='https://ceur-ws.org/Vol-610/paper11.pdf' target='_blank'>Developing GUI Applications: Architectural Patterns Revisited</a> starting on page seven. The term describes the challenge of retaining context between successive GUI operations."
+    ]
+  },
+  {
+    "id": "cells",
+    "title": "Cells",
+    "challenge": "Change propagation, widget customization, implementing a more authentic/involved GUI application.",
+    "tasks": [],
+    "description": [
+      "Cells is a more authentic and involved task that tests if a particular approach also scales to a somewhat bigger application. The two primary GUI-related challenges are intelligent propagation of changes and widget customization. Admittedly, there is a substantial part that is not necessarily very GUI-related but that is just the nature of a more authentic challenge. A good solution’s change propagation will not involve much effort and the customization of a widget should not prove too difficult. The domain-specific code is clearly separated from the GUI-specific code. The resulting spreadsheet widget is reusable.",
+      "Cells is directly inspired by the <a href='' target='_blank'>SCells spreadsheet example</a> from the book Programming in Scala. Please refer to the book (or the implementations in this repository) for more details especially with respect to the not directly GUI-related concerns like parsing and evaluating formulas and the precise syntax and semantics of the spreadsheet language."
     ]
   }
 ]

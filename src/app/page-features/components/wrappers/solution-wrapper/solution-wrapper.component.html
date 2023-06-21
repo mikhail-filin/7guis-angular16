@@ -18,7 +18,7 @@
 
     <div class="solution-wrapper-main__inner-wrapper">
         <h2 class="solution-wrapper-main__title">Code:</h2>
-        <p>Code of this component can be found here:&nbsp;<a [href]="implementationData?.codeURL" target="_blank">Github</a></p>
+        <p>Code of this component can be found here:&nbsp;<a *ngIf="implementationData?.codeURL" [href]="implementationData?.codeURL" target="_blank">Github</a></p>
         <p>Feel free to open issues if you find any.</p>
     </div>
 </section>
