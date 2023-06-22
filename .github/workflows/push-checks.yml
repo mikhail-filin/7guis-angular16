@@ -1,4 +1,4 @@
-name: push-checks
+name: test&lint
 
 on:
   push:

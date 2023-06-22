@@ -1,5 +1,5 @@
 # Sample workflow for building and deploying an Angular app to GitHub Pages
-name: Deploy Angular App with GitHub Pages dependencies preinstalled
+name: deploy
 
 on:
   # Runs on pushes targeting the default branch
