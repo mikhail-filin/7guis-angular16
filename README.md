@@ -1,3 +1,7 @@
+![example workflow](https://github.com/Gortyser/7guis-angular16/actions/workflows/deploy.yml/badge.svg)
+![example workflow](https://github.com/Gortyser/7guis-angular16/actions/workflows/push-checks.yml/badge.svg)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+
 # 7GUIs - Angular 16
 
 7GUIs is a GUI programming usability benchmark.
