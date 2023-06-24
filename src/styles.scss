@@ -71,8 +71,13 @@ label {
 	color: colors.$text-primary;
 	cursor: pointer;
 
-	&:hover {
+	&:not([disabled]):hover {
 		background: lighten(colors.$light-bg, 5%);
+	}
+
+	&[disabled] {
+		opacity: .5;
+		cursor: not-allowed;
 	}
 }
 

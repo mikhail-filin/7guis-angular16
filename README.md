@@ -22,7 +22,7 @@ using Angular 16 and newest additions like signals
 | Counter               | ✅         |
 | Temperature Converter | ✅         |
 | Flight booker         | ✅         |
-| Timer                 | ❌         |
+| Timer                 | ❓         |
 | CRUD                  | ❌         |
 | Circle drawer         | ❌         |
 | Cells                 | ❌         |
