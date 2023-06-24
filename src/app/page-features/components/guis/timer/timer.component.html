@@ -1,0 +1,31 @@
+<section id="progressSection"
+         class="timer__section">
+    <label>
+        Elapsed time:
+    </label>
+    <progress id="timerProgress"
+              [value]="progressPercentage()"
+              [max]="100">
+        {{ progress() }}%
+    </progress>
+</section>
+
+<output>{{ progress() | number: '0.0-2' }}s</output>
+
+<section id="duration"
+         class="timer__section">
+    <label for="timerRange">
+        Duration:
+    </label>
+    <input type="range"
+           id="timerRange"
+           [value]="duration()"
+           [min]="TIMER_RANGE_MIN"
+           [max]="TIMER_RANGE_MAX"
+           (input)="durationChange($event)"/>
+</section>
+
+<button class="timer__reset button-base"
+        (click)="resetTimer()">
+    Reset
+</button>
