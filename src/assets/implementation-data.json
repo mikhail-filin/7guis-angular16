@@ -20,6 +20,10 @@
   {
     "id": "flight-booker",
     "title": "Flight booker",
+    "notes": [
+      "Good example of <code>computed()</code> signals usage. Instead of adding logic to check valid dates and one-way/return flights in the template, we're creating computed signals.",
+      "This way we can keep template clear. It's still doable with pipes and methods, but usage of methods in the template should be avoided, and pipes is not such a good idea if we're not going to reuse it in other components."
+    ],
     "codeURL": "https://github.com/Gortyser/7guis-angular16/blob/main/src/app/page-features/components/guis/flight-booker/flight-booker.component.ts"
   },
   {
