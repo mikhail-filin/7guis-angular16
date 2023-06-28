@@ -1,0 +1,45 @@
+<label for="filterPrefix">Filter prefix:</label>
+<input class="input-base"
+       id="filterPrefix"
+       (input)="filterBySurname($event)"/>
+
+<ul>
+    <li *ngFor="let name of listNames()"
+        tabindex="0"
+        (keydown.enter)="selectRecord(name)"
+        (click)="selectRecord(name)">
+        {{ name }}
+    </li>
+</ul>
+
+<div class="crud__name-wrapper">
+    <label for="name">Name:</label>
+    <input class="input-base"
+           id="name"
+           [ngModel]="firstName()"
+           (ngModelChange)="firstName.set($event)"/>
+    <label for="surname">Surname:</label>
+    <input class="input-base"
+           id="surname"
+           [ngModel]="lastName()"
+           (ngModelChange)="lastName.set($event)"/>
+</div>
+
+<button class="button-base"
+        [disabled]="isNameEmpty()"
+        (click)="createRecord()">
+    Create
+</button>
+<button class="button-base"
+        [disabled]="!selectedRecord() || isNameEmpty()"
+        (click)="updateRecord()">
+    Update
+</button>
+<button class="button-base"
+        [disabled]="!selectedRecord()"
+        (click)="deleteRecord()">
+    Delete
+</button>
+
+
+
