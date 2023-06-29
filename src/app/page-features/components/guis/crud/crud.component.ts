@@ -22,7 +22,7 @@ export class CrudComponent {
 
     return names.filter((name) => {
       const surname = name.split(',')[0];
-      return surname.indexOf(filter) !== -1;
+      return surname.startsWith(filter);
     });
   });
 
