@@ -11,6 +11,7 @@ export class CrudComponent {
   public firstName: WritableSignal<string | null> = signal(null);
   public lastName: WritableSignal<string | null> = signal(null);
   public filterValue: WritableSignal<string | null> = signal(null);
+
   public isNameEmpty = computed(() => {
     return !this.firstName() || !this.lastName();
   });
@@ -26,21 +27,26 @@ export class CrudComponent {
   });
 
   public createRecord(): void {
+    const newName = `${this.lastName()}, ${this.firstName()}`;
+    if (this.listNames().has(newName)) return;
+
     this.listNames.mutate((set) => {
-      set.add(`${this.lastName()}, ${this.firstName()}`);
+      set.add(newName);
     })
     this.resetNameFields();
   }
 
   public updateRecord(): void {
     const selectedRecord = this.selectedRecord();
-    if (!selectedRecord) return;
+    const updatedName = `${this.lastName()}, ${this.firstName()}`
+    if (!selectedRecord || this.listNames().has(updatedName)) return;
 
     this.listNames.mutate((set) => {
       set.delete(selectedRecord);
-      set.add(`${this.lastName()}, ${this.firstName()}`)
+      set.add(updatedName)
     });
     this.selectedRecord.set(null);
+    this.resetNameFields();
   }
 
   public deleteRecord(): void {

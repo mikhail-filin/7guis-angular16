@@ -1,0 +1,70 @@
+@use 'src/styles/variables';
+@use 'src/styles/colors';
+
+:host {
+	display: grid;
+	grid-template-areas:
+		"filter ."
+		"list names"
+		"buttons buttons";
+	grid-auto-columns: 1fr 1fr;
+	grid-gap: variables.$gap;
+}
+
+@media (max-width: variables.$breakpoint-xs) {
+	:host {
+		grid-template-areas:
+		"filter ."
+		"list list"
+		"names names"
+		"buttons buttons";
+	}
+}
+
+.crud {
+	&__filter {
+		grid-area: filter;
+	}
+
+	&__name-wrapper {
+		grid-area: names;
+		display: grid;
+		grid-template-areas:
+			". ."
+			". .";
+		align-content: start;
+		align-items: baseline;
+		grid-gap: variables.$gap-sm;
+	}
+
+	&__name-input {
+		width: 100%;
+	}
+
+	&__buttons {
+		grid-area: buttons;
+		display: flex;
+		gap: variables.$gap-sm;
+	}
+
+	&__list {
+		list-style-type: none;
+		height: 100px;
+		max-height: 100px;
+		overflow: auto;
+		border: 1px solid colors.$dark-bg;
+		background: colors.$white;
+		border-radius: 4px;
+
+		grid-area: list;
+	}
+
+	&__list-item {
+		cursor: pointer;
+		padding: variables.$gap-xxs variables.$gap-sm;
+
+		&--selected {
+			background: colors.$light-bg;
+		}
+	}
+}

@@ -1,8 +1,10 @@
-<label for="filterPrefix">Filter prefix:</label>
-<input class="input-base"
-       id="filterPrefix"
-       [ngModel]="filterValue()"
-       (ngModelChange)="filterValue.set($event)"/>
+<div class="crud__filter">
+    <label for="filterPrefix">Filter prefix:</label>
+    <input class="input-base"
+           id="filterPrefix"
+           [ngModel]="filterValue()"
+           (ngModelChange)="filterValue.set($event)"/>
+</div>
 
 <ul class="crud__list">
     <li *ngFor="let name of filteredNames()"
@@ -17,32 +19,33 @@
 
 <div class="crud__name-wrapper">
     <label for="name">Name:</label>
-    <input class="input-base"
+    <input class="input-base crud__name-input"
            id="name"
            [ngModel]="firstName()"
            (ngModelChange)="firstName.set($event)"/>
     <label for="surname">Surname:</label>
-    <input class="input-base"
+    <input class="input-base crud__name-input"
            id="surname"
            [ngModel]="lastName()"
            (ngModelChange)="lastName.set($event)"/>
 </div>
 
-<button class="button-base"
-        [disabled]="isNameEmpty()"
-        (click)="createRecord()">
-    Create
-</button>
-<button class="button-base"
-        [disabled]="!selectedRecord() || isNameEmpty()"
-        (click)="updateRecord()">
-    Update
-</button>
-<button class="button-base"
-        [disabled]="!selectedRecord()"
-        (click)="deleteRecord()">
-    Delete
-</button>
-
+<div class="crud__buttons">
+    <button class="button-base"
+            [disabled]="isNameEmpty()"
+            (click)="createRecord()">
+        Create
+    </button>
+    <button class="button-base"
+            [disabled]="!selectedRecord() || isNameEmpty()"
+            (click)="updateRecord()">
+        Update
+    </button>
+    <button class="button-base"
+            [disabled]="!selectedRecord()"
+            (click)="deleteRecord()">
+        Delete
+    </button>
+</div>
 
 
