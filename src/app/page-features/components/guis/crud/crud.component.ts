@@ -10,13 +10,20 @@ export class CrudComponent {
   public selectedRecord: WritableSignal<string | null> = signal(null);
   public firstName: WritableSignal<string | null> = signal(null);
   public lastName: WritableSignal<string | null> = signal(null);
+  public filterValue: WritableSignal<string | null> = signal(null);
   public isNameEmpty = computed(() => {
     return !this.firstName() || !this.lastName();
   });
+  public filteredNames = computed(() => {
+    const filter = this.filterValue();
+    const names = Array.from(this.listNames());
+    if (!filter) return names;
 
-  public filterBySurname(event: Event): void {
-    const inputEl: HTMLInputElement = event.target as HTMLInputElement;
-  }
+    return names.filter((name) => {
+      const surname = name.split(',')[0];
+      return surname.indexOf(filter) !== -1;
+    });
+  });
 
   public createRecord(): void {
     this.listNames.mutate((set) => {
