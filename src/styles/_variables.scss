@@ -1,4 +1,5 @@
 $gap: 12px;
+$gap-xxs: calc(#{$gap} / 3);
 $gap-xs: calc(#{$gap} / 2);
 $gap-sm: calc(#{$gap} / 1.5);
 $gap-md: calc(#{$gap} * 1.5);
@@ -7,3 +8,4 @@ $gap-xl: calc(#{$gap} * 3);
 $gap-xxl: calc(#{$gap} * 4);
 
 $breakpoint-sm: 900px;
+$breakpoint-xs: 560px;

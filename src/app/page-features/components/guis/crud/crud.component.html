@@ -1,0 +1,51 @@
+<div class="crud__filter">
+    <label for="filterPrefix">Filter prefix:</label>
+    <input class="input-base"
+           id="filterPrefix"
+           [ngModel]="filterValue()"
+           (ngModelChange)="filterValue.set($event)"/>
+</div>
+
+<ul class="crud__list">
+    <li *ngFor="let name of filteredNames()"
+        tabindex="0"
+        class="crud__list-item"
+        [class.crud__list-item--selected]="selectedRecord() === name"
+        (keydown.enter)="selectRecord(name)"
+        (click)="selectRecord(name)">
+        {{ name }}
+    </li>
+</ul>
+
+<div class="crud__name-wrapper">
+    <label for="name">Name:</label>
+    <input class="input-base crud__name-input"
+           id="name"
+           [ngModel]="firstName()"
+           (ngModelChange)="firstName.set($event)"/>
+    <label for="surname">Surname:</label>
+    <input class="input-base crud__name-input"
+           id="surname"
+           [ngModel]="lastName()"
+           (ngModelChange)="lastName.set($event)"/>
+</div>
+
+<div class="crud__buttons">
+    <button class="button-base"
+            [disabled]="isNameEmpty()"
+            (click)="createRecord()">
+        Create
+    </button>
+    <button class="button-base"
+            [disabled]="!selectedRecord() || isNameEmpty()"
+            (click)="updateRecord()">
+        Update
+    </button>
+    <button class="button-base"
+            [disabled]="!selectedRecord()"
+            (click)="deleteRecord()">
+        Delete
+    </button>
+</div>
+
+
