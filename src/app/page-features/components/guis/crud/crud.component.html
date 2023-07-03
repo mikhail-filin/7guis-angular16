@@ -7,12 +7,12 @@
 </div>
 
 <ul class="crud__list">
-    <li *ngFor="let name of filteredNames()"
+    <li *ngFor="let name of filteredNames(); let i = index"
         tabindex="0"
         class="crud__list-item"
-        [class.crud__list-item--selected]="selectedRecord() === name"
-        (keydown.enter)="selectRecord(name)"
-        (click)="selectRecord(name)">
+        [class.crud__list-item--selected]="selectedIndex() === i"
+        (keydown.enter)="selectRecord(i)"
+        (click)="selectRecord(i)">
         {{ name }}
     </li>
 </ul>
@@ -37,12 +37,12 @@
         Create
     </button>
     <button class="button-base"
-            [disabled]="!selectedRecord() || isNameEmpty()"
+            [disabled]="selectedIndex() === null || isNameEmpty()"
             (click)="updateRecord()">
         Update
     </button>
     <button class="button-base"
-            [disabled]="!selectedRecord()"
+            [disabled]="selectedIndex() === null"
             (click)="deleteRecord()">
         Delete
     </button>
