@@ -3,17 +3,10 @@
 :host {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
 	gap: variables.$gap-lg;
 }
 
 .description {
 	margin-bottom: variables.$gap-lg;
 	max-width: 625px;
-}
-
-@media (max-height: 680px) {
-	.footer {
-		margin-top: auto;
-	}
 }
