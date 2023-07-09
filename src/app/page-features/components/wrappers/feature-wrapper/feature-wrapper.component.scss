@@ -2,7 +2,7 @@
 
 :host {
 	display: grid;
-	grid-gap: variables.$gap-xl variables.$gap-xxl;
+	grid-gap: variables.$gap-lg variables.$gap-xxl;
 	grid:
 		"header header" auto
 		"description implementation" auto / 1fr 1fr;
