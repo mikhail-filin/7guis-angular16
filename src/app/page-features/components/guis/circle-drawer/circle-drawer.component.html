@@ -1,11 +1,11 @@
 <div class="circle-drawer__buttons">
     <button class="button-base"
-            disabled
+            [disabled]="selectedCircle() || !historyIndex"
             (click)="undoAction()">
         Undo
     </button>
     <button class="button-base"
-            disabled
+            [disabled]="selectedCircle() || historyIndex === history.length - 1"
             (click)="redoAction()">
         Redo
     </button>

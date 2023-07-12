@@ -13,11 +13,17 @@ export class CircleDrawerComponent {
 
   public circles: WritableSignal<Circle[]> = signal([]);
   public selectedCircle: WritableSignal<Circle | null> = signal(null);
+  public historyIndex = 0;
+  public history: Circle[][] = [[]];
+
+  private historyChangeTimer: NodeJS.Timer | undefined;
 
   public undoAction(): void {
+    this.circles.set(this.getCopy(this.history[--this.historyIndex]));
   }
 
   public redoAction(): void {
+    this.circles.set(this.getCopy(this.history[++this.historyIndex]));
   }
 
   public createCircle(event: MouseEvent): void {
@@ -32,6 +38,7 @@ export class CircleDrawerComponent {
       r: DEFAULT_RADIUS
     };
     this.circles.mutate((val: Circle[]) => val.push(newCircle));
+    this.changeHistory();
   }
 
   public showPopup(event: Event, circle: Circle): void {
@@ -47,9 +54,25 @@ export class CircleDrawerComponent {
     }
 
     selectedCircle.r = newRadius;
+
+    if (this.historyChangeTimer) {
+      clearTimeout(this.historyChangeTimer);
+    }
+    this.historyChangeTimer = setTimeout(() => {
+      this.changeHistory();
+    }, 200);
+  }
+
+  public changeHistory(): void {
+    this.history.length = ++this.historyIndex;
+    this.history.push(this.getCopy(this.circles()));
   }
 
   private resetSelection() {
     this.selectedCircle.set(null);
+  }
+
+  private getCopy(circles: Circle[]): Circle[] {
+    return circles.map((val) => Object.assign({}, val));
   }
 }
