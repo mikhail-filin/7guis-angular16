@@ -1,0 +1,41 @@
+<div class="circle-drawer__buttons">
+    <button class="button-base"
+            [disabled]="selectedCircle() || !historyIndex"
+            (click)="undoAction()">
+        Undo
+    </button>
+    <button class="button-base"
+            [disabled]="selectedCircle() || historyIndex === history.length - 1"
+            (click)="redoAction()">
+        Redo
+    </button>
+</div>
+
+<svg class="circle-drawer__canvas"
+     (click)="createCircle($event)">
+    <circle *ngFor="let circle of circles()"
+            class="circle-drawer__circle"
+            [class.circle-drawer__circle--selected]="circle === selectedCircle()"
+            [attr.r]="circle.r"
+            [attr.cx]="circle.cx"
+            [attr.cy]="circle.cy"
+            fill="white"
+            stroke="black"
+            (click)="!selectedCircle() ? $event.stopPropagation() : null"
+            (contextmenu)="showPopup($event, circle)">
+    </circle>
+</svg>
+
+<div *ngIf="selectedCircle()"
+     class="circle-drawer__popup">
+    <label for="circleDrawerRange"
+           class="circle-drawer__popup-label">
+        Adjust diameter of circle at ({{ selectedCircle()?.cx }}, {{ selectedCircle()?.cy }})
+    </label>
+    <input type="range"
+           id="circleDrawerRange"
+           min="5"
+           [ngModel]="selectedCircle()?.r"
+           (ngModelChange)="radiusChange($event)"
+           max="100"/>
+</div>

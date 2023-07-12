@@ -1,0 +1,49 @@
+@use 'src/styles/variables';
+@use 'src/styles/colors';
+
+:host {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: variables.$gap;
+	position: relative;
+}
+
+.circle-drawer {
+	&__buttons {
+		display: flex;
+		gap: variables.$gap;
+	}
+
+	&__canvas {
+		width: 100%;
+		height: 200px;
+		background: colors.$white;
+		border: 1px solid colors.$dark-bg;
+	}
+
+	&__circle {
+		&:hover,
+		&--selected {
+			fill: lightgray;
+		}
+	}
+
+	&__popup {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		display: flex;
+		width: 85%;
+		border: 1px solid colors.$dark-bg;
+		padding: variables.$gap variables.$gap-lg;
+		background-color: colors.$main-bg;
+		flex-direction: column;
+
+		&-label {
+			text-align: center;
+		}
+	}
+}
