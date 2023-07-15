@@ -24,7 +24,7 @@ using Angular 16 and newest additions like signals
 | Flight booker         | ✅         |
 | Timer                 | ❓         |
 | CRUD                  | ❓         |
-| Circle drawer         | ❌         |
+| Circle drawer         | ❓         |
 | Cells                 | ❌         |
 
 ## Installation steps

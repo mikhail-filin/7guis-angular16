@@ -87,7 +87,15 @@
     "id": "circle-drawer",
     "title": "Circle drawer",
     "challenge": "Undo/redo, custom drawing, dialog control.",
-    "tasks": [],
+    "tasks": [
+      "Build a frame containing an undo and redo buttons and canvas area underneath",
+      "Left-clicking inside an empty area inside the canvas will create an unfilled circle with a fixed diameter whose center is the left-clicked point",
+      "Circles should be highlighted with gray color on hover",
+      "Right-clicking the circle will make a popup menu appear with a slider inside that adjusts the diameter of the circle. Changes are applied immediately",
+      "Closing the popup will mark the last selected circle as significant for the undo/redo history",
+      "Clicking the undo button will undo the last significant change (i.e. circle creation or diameter adjustment)",
+      "Clicking the redo button will reapply the last undoed change unless new changes were made by the user in the meantime"
+    ],
     "description": [
       "Circle Drawer’s goal is, among other things, to test how good the common challenge of implementing an undo/redo functionality for a GUI application can be solved. In an ideal solution the undo/redo functionality comes for free resp. just comes out as a natural consequence of the language / toolkit / paradigm. Moreover, Circle Drawer tests how dialog control*, i.e. keeping the relevant context between several successive GUI interaction steps, is achieved in the source code. Last but not least, the ease of custom drawing is tested.",
       "Dialog control is explained in more detail in the paper <a href='https://ceur-ws.org/Vol-610/paper11.pdf' target='_blank'>Developing GUI Applications: Architectural Patterns Revisited</a> starting on page seven. The term describes the challenge of retaining context between successive GUI operations."
