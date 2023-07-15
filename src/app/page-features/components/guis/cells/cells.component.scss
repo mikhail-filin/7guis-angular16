@@ -1,0 +1,52 @@
+@use 'src/styles/colors';
+
+:host {
+	display: flex;
+	width: 100%;
+	height: 300px;
+	max-width: 600px;
+	overflow: auto;
+	border: 1px solid colors.$black;
+}
+
+.cells {
+	--row-size: 26;
+	--cell-width: 100px;
+	--row-header-width: 40px;
+
+	min-width: calc(var(--cell-width) * var(--row-size) + var(--row-header-width));
+	border-spacing: 0;
+
+	&__header-cell {
+		position: sticky;
+		top: 0;
+		width: var(--cell-width);
+		border: 1px solid colors.$black;
+		background: colors.$light-bg;
+		border-top: none;
+		border-left: none;
+	}
+
+	&__grid-cell {
+		width: var(--cell-width);
+		border: 1px solid colors.$black;
+		border-top: none;
+		border-left: none;
+		background: colors.$white;
+	}
+
+	&__row-header {
+		position: sticky;
+		left: 0;
+		width: var(--row-header-width);
+		background: colors.$light-bg;
+		border: 1px solid colors.$black;
+		border-left: none;
+		border-top: none;
+
+		&--placeholder {
+			top: 0;
+			z-index: 1;
+		}
+	}
+}

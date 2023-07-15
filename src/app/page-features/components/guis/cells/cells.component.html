@@ -1,0 +1,19 @@
+<table class="cells">
+    <thead>
+        <tr>
+            <th class="cells__row-header cells__row-header--placeholder"></th>
+            <th *ngFor="let cell of cols"
+                class="cells__header-cell">
+                {{ cell }}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of [].constructor(cells[0].length); let i = index">
+            <th class="cells__row-header">{{ i }}</th>
+            <td *ngFor="let col of cols; let j = index"
+                class="cells__grid-cell">
+            </td>
+        </tr>
+    </tbody>
+</table>
