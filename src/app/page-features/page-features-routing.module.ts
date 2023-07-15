@@ -29,6 +29,11 @@ const routes: Routes = [
     component: PageFeaturesComponent,
     children: [
       {
+        path: '',
+        redirectTo: 'counter',
+        pathMatch: 'full'
+      },
+      {
         path: 'counter',
         component: CounterComponent,
         resolve: {
