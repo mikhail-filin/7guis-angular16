@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'features',
     loadChildren: () => import('./page-features/page-features.module').then(m => m.PageFeaturesModule)
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 
