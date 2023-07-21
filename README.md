@@ -25,7 +25,7 @@ using Angular 16 and newest additions like signals
 | Timer                 | ❓         |
 | CRUD                  | ❓         |
 | Circle drawer         | ❓         |
-| Cells                 | ❌         |
+| Cells                 | ❓         |
 
 ## Installation steps
 

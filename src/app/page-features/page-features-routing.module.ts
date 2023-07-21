@@ -12,7 +12,7 @@ import { ImplementationData } from './models/implementation-data.model';
 import { TimerComponent } from './components/guis/timer/timer.component';
 import { CrudComponent } from './components/guis/crud/crud.component';
 import { CircleDrawerComponent } from './components/guis/circle-drawer/circle-drawer.component';
-import { CellsComponent } from './components/guis/cells/cells.component';
+import { GridComponent } from './components/guis/cells/grid.component';
 
 export const featureResolver: ResolveFn<FeatureData | undefined> = (route: ActivatedRouteSnapshot) => {
   const dataArr = featureData as FeatureData[];
@@ -89,7 +89,7 @@ const routes: Routes = [
       },
       {
         path: 'cells',
-        component: CellsComponent,
+        component: GridComponent,
         resolve: {
           featureData: featureResolver,
           implementationData: implementationResolver
