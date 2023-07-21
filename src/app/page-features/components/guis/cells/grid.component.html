@@ -13,6 +13,8 @@
             <th class="cells__row-header">{{ i }}</th>
             <td *ngFor="let col of cols; let j = index"
                 class="cells__grid-cell">
+                <guis-cell [col]="j" [row]="i">
+                </guis-cell>
             </td>
         </tr>
     </tbody>

@@ -1,0 +1,18 @@
+@use 'src/styles/variables';
+
+:host {
+	display: flex;
+	width: var(--cell-width);
+	height: var(--cell-height);
+}
+
+.cell-text,
+.cell-input {
+	display: flex;
+	padding: variables.$gap-xs variables.$gap-sm;
+	width: var(--cell-width);
+	height: var(--cell-height);
+	line-height: var(--cell-height);
+	align-items: center;
+	font-family: monospace;
+}

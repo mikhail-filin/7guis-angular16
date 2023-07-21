@@ -11,7 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { TimerComponent } from './components/guis/timer/timer.component';
 import { CrudComponent } from './components/guis/crud/crud.component';
 import { CircleDrawerComponent } from './components/guis/circle-drawer/circle-drawer.component';
-import { CellsComponent } from './components/guis/cells/cells.component';
+import { GridComponent } from './components/guis/cells/grid.component';
+import { CellComponent } from './components/guis/cells/components/cell/cell.component';
+import { AutofocusDirective } from './components/guis/cells/directives/autofocus.directive';
 
 @NgModule({
   imports: [
@@ -29,7 +31,9 @@ import { CellsComponent } from './components/guis/cells/cells.component';
     TimerComponent,
     CrudComponent,
     CircleDrawerComponent,
-    CellsComponent
+    GridComponent,
+    CellComponent,
+    AutofocusDirective
   ]
 })
 export class PageFeaturesModule {
