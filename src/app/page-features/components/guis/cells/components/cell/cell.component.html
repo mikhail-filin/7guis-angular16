@@ -1,7 +1,7 @@
 <div class="cell-wrapper"
      tabindex="0"
      (keydown.enter)="enableEditing()"
-     (click)="enableEditing()">
+     (dblclick)="enableEditing()">
 
     <input *ngIf="isEditing; else plainText"
            class="cell-input"
