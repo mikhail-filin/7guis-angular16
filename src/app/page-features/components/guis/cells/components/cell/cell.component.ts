@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, computed, Input, WritableSignal } from '@angular/core';
 import { CellsStoreService } from '../../services/cells-store.service';
 
 @Component({
@@ -11,7 +11,10 @@ export class CellComponent {
   @Input() public col = 0;
 
   protected isEditing = false;
-  protected cells: string[][] = [];
+  protected cells: WritableSignal<string>[][] = [];
+  protected plainTextValue = computed(() => {
+    return this.cellsStore.evalCell(this.col, this.row);
+  });
 
   public constructor(public cellsStore: CellsStoreService) {
     this.cells = this.cellsStore.cells;
@@ -24,6 +27,6 @@ export class CellComponent {
   public updateCellValue($event: Event): void {
     const target: HTMLInputElement = $event.target as HTMLInputElement;
     this.isEditing = false;
-    this.cellsStore.cells[this.col][this.row] = target.value.trim();
+    this.cellsStore.cells[this.col][this.row].set(target.value.trim());
   }
 }
