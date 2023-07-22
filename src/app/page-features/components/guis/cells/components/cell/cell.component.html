@@ -5,13 +5,13 @@
 
     <input *ngIf="isEditing; else plainText"
            class="cell-input"
-           [ngModel]="cells[col][row]"
+           [ngModel]="cells[col][row]()"
            guisAutofocus
            (change)="updateCellValue($event)"
            (blur)="updateCellValue($event)">
     <ng-template #plainText>
         <span class="cell-text">
-            {{ cellsStore.evalCell(cells[col][row]) }}
+            {{ plainTextValue() }}
         </span>
     </ng-template>
 </div>

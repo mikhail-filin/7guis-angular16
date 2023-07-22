@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, WritableSignal } from '@angular/core';
 import { START_CHAR_CODE } from './models/cells.conts';
 import { CellsStoreService } from './services/cells-store.service';
 
@@ -8,7 +8,7 @@ import { CellsStoreService } from './services/cells-store.service';
   styleUrls: ['./grid.component.scss']
 })
 export class GridComponent {
-  protected cells: string[][];
+  protected cells: WritableSignal<string>[][];
   protected cols: string[] = [];
 
   public constructor(private cellsStore: CellsStoreService) {
