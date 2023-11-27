@@ -1,5 +1,5 @@
-![example workflow](https://github.com/Gortyser/7guis-angular16/actions/workflows/deploy.yml/badge.svg)
-![example workflow](https://github.com/Gortyser/7guis-angular16/actions/workflows/push-checks.yml/badge.svg)
+![example workflow](https://github.com/mikhail-filin/7guis-angular16/actions/workflows/deploy.yml/badge.svg)
+![example workflow](https://github.com/mikhail-filin/7guis-angular16/actions/workflows/push-checks.yml/badge.svg)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
 # 7GUIs - Angular 16
@@ -13,7 +13,7 @@ using Angular 16 and newest additions like signals
 
 ## Demo
 
-[https://gortyser.github.io/7guis-angular16/](https://gortyser.github.io/7guis-angular16/)
+[https://mikhail-filin.github.io/7guis-angular16/](https://mikhail-filin.github.io/7guis-angular16/)
 
 ## To do
 
